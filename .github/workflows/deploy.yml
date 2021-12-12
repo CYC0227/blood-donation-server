@@ -8,13 +8,13 @@ on:
 
 
 jobs:
-  deployment:
-    runs-on: ubuntu-latest
-    environment:
-      name: deploy
-#
-#  build:
+#  deployment:
 #    runs-on: ubuntu-latest
+#    environment:
+#      name: deploy
+
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
