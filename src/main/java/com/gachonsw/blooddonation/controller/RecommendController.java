@@ -1,6 +1,7 @@
 package com.gachonsw.blooddonation.controller;
 
 import com.gachonsw.blooddonation.dto.Result;
+import com.gachonsw.blooddonation.dto.UserResponseDto;
 import com.gachonsw.blooddonation.entity.User;
 import com.gachonsw.blooddonation.service.FlaskRelayService;
 import com.gachonsw.blooddonation.service.UserService;
@@ -9,7 +10,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -51,7 +54,11 @@ public class RecommendController {
         userList.add(user9);
         userList.add(user10);
 
-        return new Result<>(userList);
+        List<UserResponseDto> collect = userList.stream()
+                .map(UserResponseDto::new)
+                .collect(Collectors.toList());
+
+        return new Result<>(collect);
     }
 
 //    @PostMapping("/add-data")
