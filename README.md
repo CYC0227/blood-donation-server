@@ -1,6 +1,6 @@
-<p align="center">
-  <div align="center"><img src="https://raw.githubusercontent.com/GC210GP/wiki-212/master/presentations/logo.png" width="100%"/></div>
-  <br>  
+<p align="left">
+    <img src="https://github.com/GC210GP/wiki-212/raw/master/presentations/logo.png" width="700px">
+  <br>
 </p>
 
 <p align="center">"Make new connection through donation"<br> 지정헌혈 어플 <Double D> 의 서버입니다</p>
